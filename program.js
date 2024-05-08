@@ -116,14 +116,28 @@ console.log(temp);
 
 // B)IIFE
 
-
+let arr = userInput[0].split("").map(Number);
+let temp = [];
+var a = (function (arr) {
+  arr = arr.filter((num) => {
+    for (var i = 2; i < Math.sqrt(num); i++) {
+      if (num % i === 1) {
+        temp.push(num);
+      }
+    }
+    return temp;
+  });
+  console.log(temp);
+})(arr);
+ 
+//INPUT:4567 
+// OUTPUT:[5,7]
 
   
 ---------------***********************----------------------**********************
+// e.Return all the palindromes in an array
 
-  // e.Return all the palindromes in an array
-
-// A)Anonymous function
+  // A)Anonymous function
 let a=userInput[0];
 let arr=a.split("").reverse();
   let temp=[];
